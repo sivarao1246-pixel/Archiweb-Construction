@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            background: url('./assests/img/p6.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        /* Services Banner */
+        .services-banner {
+            background: url('/assets/img/building\ images2.jpeg') center/cover no-repeat;
+            position: relative;
+            padding: 80px 0;
+        }
+
+        /* Dark overlay */
+        .services-banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            /* dark shade for clarity */
+            z-index: 0;
+        }
+
+        .services {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Service card styling */
+        .service-card {
+            color: #fff;
+            /* white text */
+            padding: 20px;
+        }
+
+        .service-card h5 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            /* bold */
+            margin-top: 15px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ddd;
+            /* softer white */
+        }
+
+        /* Icon circle */
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .icon-circle i {
+            font-size: 30px;
+            color: #000;
+        }
+
+        .box {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 100px;
+        }
+
+        .box img {
+            border-radius: 8px;
+            max-width: 400px;
+
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h1 {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .box2 {
+            display: flex;
+            margin-left: 100px;
+        }
+
+        .rounded-circle {
+            width: 100px;
+            /* fixed width */
+            height: 100px;
+            /* fixed height */
+            object-fit: cover;
+            /* crops & centers the image */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="padding-left: 50px;">Archiweb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="padding-left: 50px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" style="padding-left: 50px;">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer" style="padding-left: 50px;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer" style="padding-left: 50px;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container-fluid" style="background-color: rgba(209, 209, 209, 0.7); margin-top: 100px; height: 400px; text-align: center; padding-top: 180px;  ">
+            <h1>Welcome to Archiweb</h1>
+            <p>Best solution for your home.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <!-- <a href="./img/building images.jpeg" class="btn btn-light mt-3">Explore Projects</a> -->
+        </div>
+    </div>
+
+    <!-- Services Banner -->
+    <!-- Services Section -->
+    <div class="services-banner" style="background-color: rgba(204, 241, 197, 0.8);">
+        <section class="services container text-center">
+            <h2 class="fw-bold text-white">Our Services</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h5>Planning</h5>
+                        <p>We create innovative designs that blend functionality with aesthetics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="bi bi-brush"></i>
+                        </div>
+                        <h5>Interior Solutions</h5>
+                        <p>Transforming spaces with modern interior design and creativity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h5>Exterior</h5>
+                        <p>Transforming spaces with modern exterior design and creativity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="box">
+        <img src="./assests/img/pexels-anete-lusina-4792491 1.png" alt="About Us Image" width="400">
+
+        <div class="about-content">
+            <h1>About us</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ducimus rerum qui consequuntur odit
+                corrupti saepe eaque similique officiis beatae debitis numquam nulla fugiat, aut dicta alias sequi
+                voluptates provident.</p>
+            <p>We are passionate about delivering high-quality architectural solutions that combine creativity,
+                innovation, and functionality to meet our clients’ needs.</p>
+        </div>
+    </div>
+    <!-- Gallery Section -->
+    <!-- Gallery Section -->
+    <div class="container my-5" id="projects">
+        <h2 class="text-center mb-4">Our Projects</h2>
+
+        <!-- First Row -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="./assests/img/p1.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <p class="card-text">Project1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="./assests/img/p2.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <p class="card-text">Project2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="./assests/img/p3.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <p class="card-text">Project3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="./assests/img/p4.png" class="card-img-top" alt="Project 4">
+                    <div class="card-body">
+                        <p class="card-text">Project4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="./assests/img/p5.png" class="card-img-top" alt="Project 5">
+                    <div class="card-body">
+                        <p class="card-text">Project5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="./assests/img/p6.png" class="card-img-top" alt="Project 6">
+                    <div class="card-body">
+                        <p class="card-text">Project6</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Testimonial</h2>
+        <!-- Testimonials Section -->
+        <div class="container my-5">
+            <div class="row align-items-center mb-4">
+                <!-- Person 1 -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="./assests/img/Ellipse 10.png" class="rounded-circle me-3" alt="Person 1">
+                    <div>
+                        <h5 class="fw-bold mb-1">James Passaquindici Arcand</h5>
+                        <p class="mb-0 text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+                            purus sit amet luctus venenatis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Person 2 -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="./assests/img/Ellipse 9.png" class="rounded-circle me-3" alt="Person 2">
+                    <div>
+                        <h5 class="fw-bold mb-1">Abram Schleifer</h5>
+                        <p class="mb-0 text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+                            purus sit amet luctus venenatis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+         <footer id="footer" class="bg-dark text-light py-5 mt-5">
+        <div class="container-fluid">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="fw-bold">ArchiWeb</h4>
+                    <p>Archiweb is an architectural consultant based in Berlin, Germany. We provide solutions for your architecture and residential design.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Berlin, Germany</p>
+                    <p class="mb-2"><i class="bi bi-telephone me-2"></i>+49 123 456 789</p>
+                    <p class="mb-2"><i class="bi bi-envelope me-2"></i>info@archiweb.com</p>
+                    <p class="mb-0"><i class="bi bi-clock me-2"></i>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Address</h5>
+                    <p class="mb-2">ArchiWeb Architectural Consultants</p>
+                    <p class="mb-2">Alexanderplatz</p>
+                    <p class="mb-2">10178 Berlin, Germany</p>
+                    <p class="mb-0">We look forward to working with you.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+
+        <!-- Bootstrap Icons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
